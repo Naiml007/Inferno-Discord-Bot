@@ -1,4 +1,4 @@
-# For deployment on railway.app
+# For deployment on render.com and others
 FROM golang:latest
 
 WORKDIR /
@@ -6,5 +6,7 @@ WORKDIR /
 COPY . .
 
 RUN go build Inferno
+
+EXPOSE 8080
 
 CMD [ "./Inferno" ]
